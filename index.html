@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #2e2e39;
+            color: #070707;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #8d9b8e;
+            margin-bottom: 20px;
+            margin-left: 26px;
+        }
+
+        #gridContainer {
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            grid-template-rows: repeat(5, 60px);
+            gap: 5px;
+            justify-content: center;
+            margin: 0 auto;
+        }
+
+        .current-player {
+            color: white;
+        }
+
+        .gridCell {
+            width: 60px;
+            height: 60px;
+            border: 1px solid #000;
+            text-align: center;
+            line-height: 60px;
+            font-size: 18px;
+            color: white;
+            background-color: #181818;
+            transition: background-color 0.3s;
+        }
+
+        .gridCell:nth-child(odd) {
+            background-color: #121111;
+        }
+
+        .gridCell:hover {
+            background-color: #4a55b9;
+        }
+
+        .A-Pawn,
+        .A-Hero1,
+        .A-Hero2 {
+            background-color: #ADD8E6;
+            /* Light Blue for Player A */
+        }
+
+        .B-Pawn {
+            background-color: #0a0a0a;
+        }
+
+        .B-Hero1 {
+            background-color: #030303;
+        }
+
+        .B-Hero2 {
+            background-color: #f6bc0b;
+        }
+
+        #moveOptions {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+            /* Gap between buttons */
+        }
+
+        #moveOptions button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            background-color: #857d83;
+            color: white;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        #moveOptions button:hover {
+            background-color: #434478;
+        }
+
+        #turnIndicator {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        #moveHistory {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ffffff;
+            text-align: left;
+            max-width: 600px;
+            margin: 20px auto;
+        }
+
+        #selectedPieceMessage {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Turn-based Chess-like Game</h1>
+    <link rel="icon" href="data:," />
+    <button id="newGameButton">New Game</button>
+
+
+    <div id="turnIndicator">Current Player: A</div>
+    <br>
+    <br>
+    <div id="gridContainer"></div>
+    <div id="moveOptions"></div>
+    <div id="selectedPieceMessage">Selected Piece: None</div>
+
+    <div id="moveHistory"></div>
+    <script src="client.js"></script>
+</body>
+
+</html>
