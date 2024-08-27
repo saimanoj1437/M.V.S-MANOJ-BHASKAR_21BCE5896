@@ -2,7 +2,7 @@ const gridSize = 5;
 
 let currentPlayer = 'A';
 
-let ws = new WebSocket('ws://localhost:8000');
+let ws = new WebSocket('ws://localhost:8676');
 
 
 let selectedPiece = null;
