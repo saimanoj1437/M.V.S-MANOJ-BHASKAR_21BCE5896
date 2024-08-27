@@ -1,6 +1,6 @@
 # M.V.S-MANOJ-BHASKAR_21BCE5896
 
-i edited github at 5:58pm due to adding of registraion number to descirption sorry
+I Edited github at 6:04 due to adding of registration number to my descirption sorry
 
 HERE IS MY HOSTED PROJECT:
 
